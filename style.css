@@ -68,36 +68,32 @@ p {
 
 /* 🖼️ Masonry 瀑布流布局 */
 .masonry-gallery {
-    column-count: 3;  /* 默认 3 列，减少单张图片的宽度 */
-    column-gap: 15px;  /* 适当增加间距 */
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: center;  /* 让图片组居中 */
+    flex-wrap: wrap;  /* 允许换行 */
+    gap: 15px;  /* 图片之间的间距 */
+    padding: 10px;
 }
 
 /* 🎨 Masonry 图片样式 */
 .masonry-gallery img {
-    width: 100%;
-    max-width: 250px;  /* 限制图片最大宽度，让图片更小 */
+    width: calc(25% - 15px);  /* 让 4 张图片在一行均分 */
+    max-width: 250px;  /* 限制最大宽度 */
     height: auto;  /* 保持图片比例 */
-    margin-bottom: 15px;  /* 增加图片间距 */
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* 📱 响应式设计 */
 @media (max-width: 1024px) {
-    .masonry-gallery {
-        column-count: 2;  /* 平板端 2 列 */
+    .masonry-gallery img {
+        width: calc(50% - 15px);  /* 平板端：2 列 */
     }
 }
 
 @media (max-width: 768px) {
-    .masonry-gallery {
-        column-count: 1;  /* 手机端 1 列 */
-    }
-
     .masonry-gallery img {
-        max-width: 100%;  /* 适应小屏幕 */
+        width: 100%;  /* 手机端：单列排列 */
     }
 }
+
