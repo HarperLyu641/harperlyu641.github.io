@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* 🌍 全局样式 */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -7,31 +7,50 @@ body {
     padding: 20px;
 }
 
-/* 标题样式 */
+/* 🏆 标题样式 */
 h1 {
-    color: #0073e6;
+    color: #0056b3;  /* 让标题颜色更柔和 */
 }
 
 h2 {
-    color: #0056b3;
+    color: #004494;
     margin-top: 20px;
 }
 
-/* 个人照片 */
+/* 👤 个人简介卡片 */
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+.profile-card img {
+    width: 150px;  /* 头像大小 */
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* 📸 图片样式（通用） */
 img {
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
+    max-width: 100%;  /* 确保图片不会超出容器 */
 }
 
-/* 介绍文字 */
+/* 📜 介绍文字 */
 p {
     max-width: 800px;
     margin: 10px auto;
     line-height: 1.6;
 }
 
-/* 按钮样式 */
+/* 🔗 按钮样式 */
 .contact-button {
     display: inline-block;
     background-color: #0073e6;
@@ -47,18 +66,9 @@ p {
     background-color: #0056b3;
 }
 
-/* 让网页更美观 */
-.container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: auto;
-}
-
+/* 🖼️ 图片 Masonry 瀑布流布局 */
 .masonry-gallery {
-    column-count: 2;  /* 让图片自动分成 2 列 */
+    column-count: 2;  /* 默认 2 列 */
     column-gap: 10px;
 }
 
@@ -69,3 +79,17 @@ p {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* 📱 响应式设计：小屏幕自动调整 */
+@media (max-width: 768px) {
+    .masonry-gallery {
+        column-count: 1;  /* 手机端改成 1 列 */
+    }
+
+    .profile-card {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
