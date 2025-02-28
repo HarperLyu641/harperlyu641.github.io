@@ -66,36 +66,38 @@ p {
     background-color: #0056b3;
 }
 
-/* 🖼️ 图片 Masonry 瀑布流布局 */
+/* 🖼️ Masonry 瀑布流布局 */
 .masonry-gallery {
-    column-count: 2;  /* 默认 2 列 */
-    column-gap: 10px;
+    column-count: 3;  /* 默认 3 列，减少单张图片的宽度 */
+    column-gap: 15px;  /* 适当增加间距 */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+/* 🎨 Masonry 图片样式 */
 .masonry-gallery img {
     width: 100%;
-    max-width: 300px;  /* 限制图片最大宽度 */
+    max-width: 250px;  /* 限制图片最大宽度，让图片更小 */
     height: auto;  /* 保持图片比例 */
-    margin-bottom: 10px;
+    margin-bottom: 15px;  /* 增加图片间距 */
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 📱 响应式设计：小屏幕自动调整 */
+/* 📱 响应式设计 */
+@media (max-width: 1024px) {
+    .masonry-gallery {
+        column-count: 2;  /* 平板端 2 列 */
+    }
+}
+
 @media (max-width: 768px) {
     .masonry-gallery {
-        column-count: 1;  /* 手机端改成 1 列 */
+        column-count: 1;  /* 手机端 1 列 */
     }
 
     .masonry-gallery img {
-        max-width: 100%;  /* 在小屏幕上，图片最大宽度改为自适应 */
+        max-width: 100%;  /* 适应小屏幕 */
     }
-
-    .profile-card {
-        max-width: 90%;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-} /* ❌ 你原来的代码里这里有个多余的 "}"，已修正 */
+}
