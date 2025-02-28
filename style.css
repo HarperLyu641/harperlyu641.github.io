@@ -66,34 +66,35 @@ p {
     background-color: #0056b3;
 }
 
-/* 🖼️ Masonry 瀑布流布局 */
+/* 🖼️ 让 Masonry 瀑布流布局 居中对齐 */
 .masonry-gallery {
     display: flex;
-    justify-content: center;  /* 让图片组居中 */
+    justify-content: center;  /* 💡 让整个图片区域水平居中 */
     flex-wrap: wrap;  /* 允许换行 */
-    gap: 15px;  /* 图片之间的间距 */
+    gap: 20px;  /* 图片间距 */
     padding: 10px;
+    max-width: 80%;  /* 控制宽度，避免过度拉伸 */
+    margin: 0 auto;  /* 💡 让整个区域在页面居中 */
 }
 
-/* 🎨 Masonry 图片样式 */
+/* 🎨 让图片大小统一 */
 .masonry-gallery img {
-    width: calc(25% - 15px);  /* 让 4 张图片在一行均分 */
+    width: 22%;  /* 💡 让一行最多 4 张，保持间距 */
     max-width: 250px;  /* 限制最大宽度 */
-    height: auto;  /* 保持图片比例 */
+    height: auto;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 📱 响应式设计 */
+/* 📱 响应式优化 */
 @media (max-width: 1024px) {
     .masonry-gallery img {
-        width: calc(50% - 15px);  /* 平板端：2 列 */
+        width: 45%;  /* 平板端 2 列 */
     }
 }
 
 @media (max-width: 768px) {
     .masonry-gallery img {
-        width: 100%;  /* 手机端：单列排列 */
+        width: 90%;  /* 手机端 1 列 */
     }
 }
-
