@@ -90,8 +90,6 @@ p {
     .masonry-gallery img {
         max-width: 100%;  /* 在小屏幕上，图片最大宽度改为自适应 */
     }
-}
-
 
     .profile-card {
         max-width: 90%;
@@ -100,4 +98,4 @@ p {
     h1 {
         font-size: 24px;
     }
-}
+} /* ❌ 你原来的代码里这里有个多余的 "}"，已修正 */
