@@ -56,3 +56,22 @@ p {
     max-width: 900px;
     margin: auto;
 }
+
+.image-gallery {
+    display: flex;
+    justify-content: center;  /* 图片居中 */
+    gap: 10px;  /* 图片之间的间距 */
+    flex-wrap: wrap;  /* 允许换行，适应不同屏幕 */
+}
+
+.image-gallery img {
+    width: 22%;  /* 控制图片大小（根据图片数量调整） */
+    border-radius: 10px;  /* 让图片有圆角 */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  /* 增加阴影，让图片更美观 */
+    transition: transform 0.3s;  /* 鼠标悬停时放大 */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
+
