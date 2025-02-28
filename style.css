@@ -1,0 +1,58 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 标题样式 */
+h1 {
+    color: #0073e6;
+}
+
+h2 {
+    color: #0056b3;
+    margin-top: 20px;
+}
+
+/* 个人照片 */
+img {
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+/* 介绍文字 */
+p {
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+/* 按钮样式 */
+.contact-button {
+    display: inline-block;
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* 让网页更美观 */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: auto;
+}
